@@ -22,22 +22,18 @@
         
         //se forem iguais, mostrar mensagem 'empate'
        
-            
             //sortear um numero entre 0 e 1
             var nSorteado = parseInt(Math.random() * 2);
-            nSorteado
+            alert('nSorteado:' + nSorteado)//isso é concatenação
+
             // se o numero sorteado for 0, ganha quem escolher o numero MENOR
-                        
-            //se o numero sorteado for 1, ganha quem escolher o numero MAIOR
-            
-            if((nSorteado === 0 && nJogador1 < nJogador2) || (nSorteado === 1 && nJogador1 > nJogador2)){
+            if(nSorteado === 0 && nJogador1 < nJogador2 || nSorteado === 1 && nJogador1 > nJogador2){
                 alert('ganhou o jogador 1');
             }else{
                 alert('ganhou o jogador 2')
-            }
-        
-        
-        
-        
+            }           
+
+            //se o numero sorteado for 1, ganha quem escolher o numero MAIOR
+          
     </script>
 </html>
