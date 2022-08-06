@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+     <title>Lógica de programação com Javascript</title>
+     <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Lógica de programação com Javascript (FUNÇÕES) - inserção de conteúdo html</h1>
+
+    <button onclick="mostrarTabuada()">Criar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+    <div id="output"></div>
+
+  <script>
+     //cria uma função
+    function mostrarTabuada(){
+      alert('mostarTabuada chamada');
+    }
+
+     function limparTabuada(){
+      alert('limparTabuada chamada');
+     }
+
+                          //referencia ao elemento que tem id(#) "output" obs pode ser qualquer elemento como <p> ou <h1>
+    let output = document.querySelector('#output');
+    
+    let mensagem = '';
+   
+    output.innerHTML = mensagem
+
+  </script>
+
+  </body>
+</html>
