@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+     <title>Lógica de programação com Javascript</title>
+     <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Exercício sobre loop</h1>
+    <p>Ex que consiste em colocar uma linha (tag <code>
+      hr </code>) para separar esse tanto de informação </p>
+    
+     
+    <script>
+      let numero = prompt('digite um numero');
+       numero = parseFloat(numero);
+
+      let indice = 1;
+      //repita até que indice seja<=1000
+
+      while(indice <= 1000){
+           document.write(numero +'x'+indice + '=' + (numero*indice)+'<br>');
+                                                           
+           if(indice % 10 === 0 && indice > 0){
+             document.write('<hr>')
+           }
+
+           indice = indice + 1; 
+      }
+      document.write('saiu do loop');  
+    </script>
+ 
+  </body>
+</html>
