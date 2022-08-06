@@ -15,11 +15,30 @@
   <script>
      //cria uma função
     function mostrarTabuada(){
-      alert('mostarTabuada chamada');
+      //perguntar o numero para o usuario
+
+      limparTabuada();
+
+       let n = prompt("digite um numero");
+      //converter o numero 
+       n = parseFloat(n)
+      //criar uma variavel que servira de indice
+       let i = 1 
+      //enquanto indece <= 1000 
+           //concatena na variavel mensagem
+      while (i <=1000){
+        mensagem += n + ' x '+ ' x '+ i + ' = '+ (n*i) + '<br>';
+        i++;
+      }
+
+      output.innerHTML = mensagem
+      //mostra mensagem no output     
+     
     }
 
      function limparTabuada(){
-      alert('limparTabuada chamada');
+      mensagem= '';
+      output.innerHTML = mensagem;
      }
 
                           //referencia ao elemento que tem id(#) "output" obs pode ser qualquer elemento como <p> ou <h1>
@@ -27,8 +46,7 @@
     
     let mensagem = '';
    
-    output.innerHTML = mensagem
-
+    
   </script>
 
   </body>
