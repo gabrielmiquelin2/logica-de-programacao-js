@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Lógica de programação com Javascript</title>
+     <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Desafio mini calculadora</h1>
+
+    <button onclick="calcular ('+')">+</button>
+    <button onclick="calcular ('-')">-</button>
+    <button onclick="calcular ('*')">*</button>
+    <button onclick="calcular ('/')">/</button>
+
+    <div id="output"></div>
+
+     <script>
+
+      let n1 = prompt("Dígite um número")
+      n1 = parseFloat(n1)
+
+      escreve();
+
+      function escreve(){
+        let output =
+        document.querySelector("#output");
+        output.innerHTML = n1
+      }
+
+      function calcular (simbolo){
+        let n = prompt("digite outro numero");
+        n = parseFloat(n);
+        //n1 = ni + n;
+        //n1 += n; //mesma coisa
+
+         switch(simbolo){
+              case '+';
+                n1 += n;
+                break;
+              
+              case '-'
+                 n1 -= n;
+                 break;
+              
+              case '*';
+                 n1 *= n;   
+                 break;
+
+              case '/';
+                n1 /= n;     
+         }
+
+         escreve();
+
+      }
+
+     
+      
