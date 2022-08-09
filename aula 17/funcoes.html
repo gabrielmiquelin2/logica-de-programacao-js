@@ -15,22 +15,33 @@
 
     <script>
 
-        let largura = prompt('digite a largura');
-        largura = parseFloat(largura);
+       
 
-        let altura = promt ('digite a altura');
-        altura = parseFloat(altura);
+        function mostrarAreaAlert(){
 
-        function mostrarAreaAlert(l, a){
+            let largura = prompt('digite a largura');
+            largura = parseFloat(largura);
+
+            let altura = promt ('digite a altura');
+            altura = parseFloat(altura);
+
+            
             let area = calcularArea(largura, altura);
 
             alert('a área total é: ' + area)
         }
 
         function mostrarAreaOutput(){
+
+            let largura = prompt('digite a largura');
+            largura = parseFloat(largura);
+
+            let altura = promt ('digite a altura');
+            altura = parseFloat(altura);
+
             let area = calcularArea(largura, altura);
 
-            document.querySelector('#output').innerHTML = 'a área total é: ' + area
+          document.querySelector('#output').innerHTML = 'a área total é: ' + area;
         }
 
         function calcularArea(l, a){
