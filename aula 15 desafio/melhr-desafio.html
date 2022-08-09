@@ -16,10 +16,41 @@
 
      <script>
 
-      
+      let n1 = prompt('digite um numero'); 
+      n1 = parseFloat(n1);
 
+      escreve();
 
+      function escreve(){
+        let output=
+        document.querySelector('#output');
+        output.innerHTML=n1;
+      }
 
+      function calcular(simbolo){
+         let n = prompt('digite outro numero');
+         n = parseFloat(n)
+
+         
+          switch(simbolo){
+            case'+':
+                nl += n;
+                break;
+            case'-':
+                nl -= n;
+                break;
+            case'*':
+                nl *= n;
+                break;
+            case'/':
+                n1 /= n;
+                     
+         }
+
+         escreve();
+
+      }
+    
      </script>
 
   </body>
