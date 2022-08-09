@@ -7,47 +7,59 @@
   <body>
     <h1>Melhorando a mini calculadora</h1>
 
-    <button onclick="somar ()">+</button>
-    <button onclick="subtrair ()">-</button>
-    <button onclick="multiplicar ()">*</button>
-    <button onclick="dividir ()">/</button>
+    <button onclick="iniciarCalculo ('+')">+</button>
+    <button onclick="iniciarCalculo ('-')">-</button>
+    <button onclick="iniciarCalculo ('*')">*</button>
+    <button onclick="iniciarCalculo ('/')">/</button>
 
     <div id="output"></div>
 
      <script>
 
-      let n1 = prompt('digite um numero'); 
-      n1 = parseFloat(n1);
+      let n2 = prompt('digite um numero'); 
+      n2 = parseFloat(n2);
 
-      escreve();
+      escreve(n2);
 
-      function escreve(){
-        let output=
-        document.querySelector('#output');
-        output.innerHTML=n1;
+      function iniciarCalculo(simbolo){
+        let n1 = document.querySelector('#output').textContent
+
+        let n2 = prompt('digite outro numero');
+        n2 = parseFloat(n2)
+
+        let msg = calcular(simbolo, n1, n2);
+
+        escreve(msg);
+
       }
 
-      function calcular(simbolo){
-         let n = prompt('digite outro numero');
-         n = parseFloat(n)
+      function escreve(mensagem){
+        let output=
+        document.querySelector('#output');
+        output.innerHTML= mensagem;
+      }  
 
-         
+      function calcular(simbolo, n1, n2){
+        
+          let numeroCalculado = null;
+
+        
           switch(simbolo){
             case'+':
-                nl += n;
+                numeroCalculado = n1 + n2;
                 break;
             case'-':
-                nl -= n;
+                numeroCalculado = n1- n2; 
                 break;
             case'*':
-                nl *= n;
+                numeroCalculado = n1 * n2;
                 break;
             case'/':
-                n1 /= n;
+                numeroCalculado = n1 / n2;
                      
          }
 
-         escreve();
+         return numeroCalculado;
 
       }
     
