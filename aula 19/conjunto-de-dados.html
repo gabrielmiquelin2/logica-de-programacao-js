@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Lógica de programação com Javascript</title>
+     <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Arrays</h1> 
+    <p>Mostrar na tela todos os produtos disponiveis para compra.</p>
+
+      <div id="output"></div>
+   <script>
+  
+     let produtos = new Array ('caneta', 'lapis', 'tesoura', 'borracha', 'caderno', 'livro' );
+    produtos.push('compasso', 'cartolina')
+     
+     let output = document.querySelector('#output');
+
+     let msg = '';
+     for (let i = 0; i < produtos.length; i++){
+        msg += 'produto ' + (i + 1) + ': '+ produtos [i] + ' <br>';
+    }
+     
+    output.innerHTML = msg;
+
+   </script>
+
+  </body>
+</html>
