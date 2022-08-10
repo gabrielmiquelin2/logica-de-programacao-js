@@ -28,7 +28,12 @@
         let n2 = prompt('digite outro numero');
         n2 = parseFloat(n2)
 
-        let msg = calcular(simbolo, n1, n2);
+        try{
+          let msg = calcular(simbolo, n1, n2);
+        }catch(e){
+          alert(e);
+          return;
+        }
 
         escreve(msg);
 
@@ -41,6 +46,17 @@
       }  
 
       function calcular(simbolo, n1, n2){
+        console.log(simbolo)
+
+        if(simbolo !== '+' && simbolo !== '=' && simbolo !== '*' && simbolo !== '/'){
+            throw  new error('digite um simbolo valido')
+            
+        } 
+
+        if(isNan(n1) || isNan(n2)){
+          throw new error('chama passasndo somente numeros')
+         
+        }
         
           let numeroCalculado = null;
 
@@ -63,8 +79,10 @@
          return numeroCalculado;
 
       }
+      
     
      </script>
 
   </body>
 </html>
+
