@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Lógica de programação com Javascript</title>
+     <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Criar um array com tres objetos deverá ter 2 propriedades (nome e email)</h1>
+
+    <div id="output"></div>
+   <script>
+       //tres objetos
+       let user1 = new Object();
+       user1.nome = 'maria';
+       user1.email = 'maria@server.com';
+
+       let user2 = new Object();
+       user2.nome = 'joao';
+       user2.email = 'joao@server.com';
+
+       let user3 = new Object();
+       user3.nome = 'gabriel';
+       user3.email = 'gabriel@server.com';
+
+       let users = new Array(user1, user2, user3);
+
+       console.log(users);
+
+       let msg ='';
+       let x = 0;
+       //undefined = avaliado como falso
+       while(users[x]){
+        console.log(users[x].nome);
+        msg += users[x].nome + ' - '+ users[x].email +' <br>';
+        x++;
+       }
+
+       document.querySelector('#output').innerHTML = msg 
+
+   </script>
+
+  </body>
+</html>
